@@ -1,0 +1,171 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header{
+
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(..//static/images/vector-feb-2021-84_generated.jpg) center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+nav img{
+    width: 150px;
+    height: 100px;
+}
+h1{
+    font-size: xx-large;
+    color: aliceblue;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: aliceblue;
+} 
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: medium;
+    color: aliceblue;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: aliceblue;
+    font-size: medium;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+/* 
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: right;
+}
+nav img{
+    width: 150px;
+    height: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: lightseagreen;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.sub-headerlogin{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/banner.jpg) center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    color: white;
+}
+.sub-headerlogin h1{
+    font-size: xx-large;
+    color: aliceblue;
+} 
+.login {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: aliceblue;
+}
+
+label {
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: medium;
+    color: aliceblue;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #efefef;
+    color: aliceblue;
+    font-size: medium;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #fcfcfd;
+} */

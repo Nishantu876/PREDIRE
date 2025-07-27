@@ -1,0 +1,63 @@
+
+.sub-headerlogin{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(..//static/images/vector-feb-2021-84_generated.jpg) center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.sub-headerlogin h1{
+    font-size: xx-large;
+    color: aliceblue;
+} 
+.login {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: aliceblue;
+}
+
+label {
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: medium;
+    color: aliceblue;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: aliceblue;
+    font-size: medium;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
