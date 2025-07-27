@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/all.css"> 
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/profile.css">
+</head>
+<body>
+    <!-- <link rel="stylesheet" href="../static/signup.css"> -->
+    <section class="header">
+        <nav>
+            <a href='/index'> <img src="../static/images/logo.png"></a>
+            <div1 class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                        <li><a href="/login">LOGIN</a></li>
+                        <!-- <li><a href="/profile">PROFILE</a></li>- -->
+                        <li><a href="/index">HOME</a></li>
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/predictionPage">PREDICT</a></li>
+                        <li><a href="/blog">BLOG/NEWS</a></li>
+                        <li><a href="/contactUs">CONTACT</a></li>
+                    
+                </ul>
+            </div1>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+	<section class="py-5 my-5">
+		<div class="container">
+			<h1 class="mb-5 text-white">Patient Form</h1>
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
+				<div class="profile-tab-nav border-right">
+					<div class="p-4">
+						<div class="img-circle text-center mb-3">
+							<img src="../static/images/1.png" alt="Image" class="shadow">
+						</div>
+						<h4 class="text-center">Sonuwa Singh</h4>
+					</div>
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
+							<i class="fa fa-home text-center mr-1"></i> 
+							Account
+						</a>
+						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
+							<i class="fa fa-key text-center mr-1"></i> 
+							Password
+						</a>
+						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
+							<i class="fa fa-user text-center mr-1"></i> 
+							Security
+						</a>
+						<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
+							<i class="fa fa-tv text-center mr-1"></i> 
+							Application
+						</a>
+						<a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
+							<i class="fa fa-bell text-center mr-1"></i> 
+							Notification
+						</a>
+					</div>
+				</div>
+				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="account-tab">
+						<h3 class="mb-4">Personal Information</h3>
+						<form action="" id = "contactForm">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="firstname" class="form-control" name="firstname" placeholder="First Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="lastname" class="form-control" name="lastname" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="email" class="form-control" name="email" placeholder="Email - id">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="age" class="form-control" name="age" placeholder="Age">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="gender" class="form-control" name="gender" placeholder="Gender">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" id="contactno" class="form-control" name="contactno" placeholder="Contact Number">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea id="otherinfo "class="form-control" rows="4" name="otherinfo" placeholder="Other Information"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Submit</button>
+								<button class="btn btn-light" type="reset" value="Cancel">Cancel</button>
+								<button class="btn btn-light" type="reset" value="Cancel">Edit</button>
+								<button class="btn btn-light" onclick="window.print()">Print</button>
+							</div>
+						</form>	
+					</div>
+					<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4">Password Settings</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Old password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>New password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Confirm new password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div>
+							<input class="btn text-white" type="submit" style="background-color:#007bff" id='updateinfo' name="details_update" value="Update" href="/index"/>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+						<h3 class="mb-4">Security Settings</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Login</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Two-factor auth</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="recovery">
+										<label class="form-check-label" for="recovery">
+										Recovery
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<input class="btn text-white" type="submit" style="background-color:#007bff" id='updateinfo' name="details_update" value="Update" href="/index"/>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+						<h3 class="mb-4">Application Settings</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="app-check">
+										<label class="form-check-label" for="app-check">
+										App check
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+										<label class="form-check-label" for="defaultCheck2">
+										Lorem ipsum dolor sit.
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<input class="btn text-white" type="submit" style="background-color:#007bff" id='updateinfo' name="details_update" value="Update" href="/index"/>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+						<h3 class="mb-4">Notification Settings</h3>
+						<div class="form-group">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="notification1">
+								<label class="form-check-label" for="notification1">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusantium accusamus, neque cupiditate quis
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="notification2" >
+								<label class="form-check-label" for="notification2">
+									hic nesciunt repellat perferendis voluptatum totam porro eligendi.
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="notification3" >
+								<label class="form-check-label" for="notification3">
+									commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
+								</label>
+							</div>
+						</div>
+						<div>
+							<input class="btn text-white" type="submit" style="background-color:#007bff" id='updateinfo' name="details_update" value="Update" href="/index"/>
+							<button class="btn btn-light">Cancel</button>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAySonizdoAc568oWQTLdmKCuWuS5B0i90",
+    authDomain: "disease-prediction-be-project.firebaseapp.com",
+    databaseURL: "https://disease-prediction-be-project-default-rtdb.firebaseio.com",
+    projectId: "disease-prediction-be-project",
+    storageBucket: "disease-prediction-be-project.appspot.com",
+    messagingSenderId: "791769497910",
+    appId: "1:791769497910:web:66e33491d73aadcfdaf397",
+    measurementId: "G-84ZWMNGJV5"
+  };
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the database services
+var contactFormDB = firebase.database().ref("contactForm");
+
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+	e.preventDefault();
+
+	var firstname = getElementVal("firstname");
+	var lastname = getElementVal("lastname");
+	var email = getElementVal("email");
+	var age = getElementVal("age");
+	var gender = getElementVal("gender");
+	var contactno = getElementVal("contactno");
+	alert("Details Updated");
+
+
+	saveMessages(firstname, lastname, email, age, gender, contactno);
+
+	// ******* edit code*****************
+// 	dbRef.push({ firstname,lastname ,email,age,gender,contactno });
+// 	<div id="myDiv"></div>
+	
+//   const myDiv = document.getElementById('myDiv');
+
+//   dbRef.on('child_added', data => {
+//     const val = data.val();
+//     myDiv.innerHTML += `
+//       <p>${val.name} (${val.email})</p>
+//     `;
+//   });
+
+var userDataRef = firebase.database().ref("contactForm").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+  var key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+
+  var firstname_val = childSnapshot.val().firstname;
+  var lastname_val = childSnapshot.val().lastname;
+  var age_val = childSnapshot.val().age;
+  var gender_val = childSnapshot.val().gender;
+  var email_val = childSnapshot.val().email;
+  var contactno_val = childSnapshot.val().contactno;
+
+  $("#firstname").append(firstname_val);
+  $("#lastname").append(lastname_val);
+  $("#age").append(age_val);
+  $("#gender").append(gender_val);
+  $("#email").append(email_val);
+  $("#contactno").append(contactno_val);
+  
+  });
+});
+
+
+	
+	//   enable alert
+	document.querySelector(".alert").style.display = "block";
+
+	//   remove the alert
+	setTimeout(() => {
+		document.querySelector(".alert").style.display = "none";
+	}, 3000);
+
+	//   reset the form
+	document.getElementById("contactForm").reset();
+}
+
+const saveMessages = (firstname,lastname,email,age,gender,contactno) => {
+  var newContactForm = contactFormDB.push();
+
+  newContactForm.set({
+    firstname: firstname,
+	lastname: lastname,
+    email: email,
+	age: age,
+	gender: gender,
+	contactno: contactno
+  });
+};
+
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
+};
+</script>
+
+</html>

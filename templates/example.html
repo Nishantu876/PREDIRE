@@ -1,0 +1,43 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script type="module">
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAySonizdoAc568oWQTLdmKCuWuS5B0i90",
+    authDomain: "disease-prediction-be-project.firebaseapp.com",
+    databaseURL: "https://disease-prediction-be-project-default-rtdb.firebaseio.com",
+    projectId: "disease-prediction-be-project",
+    storageBucket: "disease-prediction-be-project.appspot.com",
+    messagingSenderId: "791769497910",
+    appId: "1:791769497910:web:66e33491d73aadcfdaf397",
+    measurementId: "G-84ZWMNGJV5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<form id="myForm">
+   <input type="text" id="name" placeholder="Enter your name">
+   <input type="email" id="email" placeholder="Enter your email">
+   <button type="submit">Submit</button>
+</form>
+<script>
+  const myForm = document.getElementById('myForm');
+  const dbRef = firebase.database().ref();
+
+  myForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    dbRef.push({ name, email });
+  });
+</script>
+<div id="myDiv"></div>
+<script>
+  const myDiv = document.getElementById('myDiv');
+
+  dbRef.on('child_added', data => {
+    const val = data.val();
+    myDiv.innerHTML += `
+      <p>${val.name} (${val.email})</p>
+    `;
+  });
+</script>

@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/all.css"> 
+    
+      </head>
+<body>
+    <link rel="stylesheet" href="../static/signup.css">
+    <section class="header">
+        <nav>
+            <a href='/index'> <img src="../static/images/logo.png"></a>
+            <div1 class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                        <li><a href="/login">LOGIN</a></li>
+                        <li><a href="/profile">PROFILE</a></li>
+                        <li><a href="/index">HOME</a></li>
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/predictionPage">PREDICT</a></li>
+                        <li><a href="/blog">BLOG/NEWS</a></li>
+                        <li><a href="/contactUs">CONTACT</a></li>
+                    
+                </ul>
+            </div1>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+        
+        <div id="login-box">
+            <h1>Sign UP</h1><br>
+            <div class="left">
+                <!-- <link rel="stylesheet" href="../static/signup.css"> -->
+                <input type="text" id="username" name="usernmame" placeholder="Username" />
+                <input type="text" id="email" name="email" placeholder="E-mail" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <!-- <a href="/index"> -->
+                <input type="submit" id='signUp' name="signup_submit" value="Sign up" /></a>
+          
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+    </section>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js"; 
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAySonizdoAc568oWQTLdmKCuWuS5B0i90",
+    authDomain: "disease-prediction-be-project.firebaseapp.com",
+    databaseURL: "https://disease-prediction-be-project-default-rtdb.firebaseio.com",
+    projectId: "disease-prediction-be-project",
+    storageBucket: "disease-prediction-be-project.appspot.com",
+    messagingSenderId: "791769497910",
+    appId: "1:791769497910:web:ba6962259c52f72fdaf397",
+    measurementId: "G-615G3S9CG7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+
+  // **************SIGN UP**********************
+  
+  signUp.addEventListener('click',(e) => {
+
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var username = document.getElementById('username').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    // Signed in 
+        const user = userCredential.user;
+        alert('user created!');
+        window.location.href = "http://127.0.0.1:5000/profile"
+    
+        set(ref(database, 'user/' + user.uid), {
+            username: username,
+            email: email
+    })
+    })
+     .catch((error) => {
+     const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+     // ..
+    });
+
+});
+
+</script>
+</html>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/all.css"> 
+
+    </head>
+<body>
+        <section class="sub-header">
+            <nav>
+                <a href="/index"> <img src="../static/images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/login">LOGIN</a></li>
+                        <li><a href="/profile">PROFILE</a></li>
+                        <li><a href="/index">HOME</a></li>
+                        <!-- <li><a href="/about">ABOUT</a></li> -->
+                        <li><a href="/predictionPage">PREDICT</a></li>
+                        <li><a href="/blog">BLOG/NEWS</a></li>
+                        <li><a href="/contactUs">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <h1>About Us</h1>
+
+        </section>
+        <!------------------ABOUT US CONTENT------------------------------>
+        <section class="about-us">
+            <div class="row">
+                <div class="about-col">
+                    <h1>ONE OF THE MOST ACCURATE DISEASE PREDICTORS ON THE INTERNET</h1>
+                    <p>Prédire provides an intricate and accurate prediction using a different approach than the pre-existing systems on the internet.
+                     It's prediction model is weight-based. It predicts the highest weighted disease based on 5 symptoms provided by the user. Here, weights are values ranging from 1-5 assigned to each disease based on their severity, where the higher value indicates a higher severity.
+                    </p>
+                    <a href="/predictionPage" class="hero-btn abt-btn">EXPLORE NOW</a>
+                </div>
+                <div class="about-col">
+                    <img src="../static/images/pexels-anthony-shkraba-5466285.jpg">
+                </div>
+            </div>
+        </section>
+        <section class="about-us2">
+            <div class="row">
+                <div class="about-col2">
+                    <h3>OUR GOAL</h3>
+                    <p>We believe that people should be delivered the best at all times and We certainly deliver that. Through this website we provide a variety of services such as Blogs, News and even provide a Smart prediction model to get a Quick and Precise prediction of which disease you might have symptoms of.</p>
+                   
+                </div>
+                <div class="about-col2">
+                    <h3>OUR MISSION</h3>
+                    <p>As we all know there are a lot of people suffering around the world who do not have access to or monetary funds to get a professionals advice. We integrate Information Technology with Healthcare Industry to provide Basic information and guidance to those in need.</p>
+                 
+                </div>
+                <div class="about-col2">    
+                    <h3>OUR METHODS </h3>
+                     <p>After testing various algorithms we concluded that  Random Forest Classifier was best suited for the job
+                Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. It is based on the concept of ensemble learning, which is a process of combining multiple classifiers to solve a complex problem and to improve the performance of the model.
+                    </p>
+                </div>    
+            </div>
+        </section>
+
+
+        <!-----------------------------Footer------------------------------>
+        <section class="footer">
+            <h4>Support Us</h4>
+            <p>Hello This is Nishant Upadhyay have made this website as my ML Project</p>
+
+            <p>Made with <i class="far fa-heart"></i>  by Nishant Upadhyay</p>
+        </section>
+        <!----------------------JavaScript for MENU------------------------->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200";
+            }
+
+
+        </script>
+</body>
+</html>

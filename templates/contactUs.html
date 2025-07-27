@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/all.css"> 
+
+    </head>
+<body>
+        <section class="sub-header contact-banner">
+            <nav>
+                <a href="/index"> <img src="../static/images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/login">LOGIN</a></li>
+                        <li><a href="/profile">PROFILE</a></li>
+                        <li><a href="/index">HOME</a></li>
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/predictionPage">PREDICT</a></li>
+                        <li><a href="/blog">BLOG/NEWS</a></li>
+                        <!-- <li><a href="/contactUs">CONTACT</a></li> -->
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <h1>Contact Us</h1>
+
+        </section>
+        <!------------------Contact US CONTENT------------------------------>
+        <section class="contactsec">
+            <h4>Come Visit Us At</h4>
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Stevens Institue of Technology </h5>
+                            <p>Hoboken, New Jersey, NJ</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5><a href= "tel: +15513444513">CALL US</a></h5>
+                            <p>Monday to Saturday, 10am to 3pm</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <h5>info@stevens.edu, nishant.as.up@gmail.com</h5>
+                            <p>Email your query here</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-link"></i>
+                        <span>
+                            <h5><a href = "www.linkedin.com/in/nishant-a-upadhyay">LINKED IN/ Nishant Upadhyay</a></h5>
+                            <p>Connect with us here</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6045.564173896435!2d-74.02822342400952!3d40.744820271388704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259deeb426a4d%3A0x52b7295ea9b98396!2sStevens%20Institute%20of%20Technology!5e0!3m2!1sen!2sus!4v1715210062773!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+                </div>
+            </div>
+           
+        </section>
+
+        <section class="contact-form">
+            <h4>We’re here for you!<br>
+                Please use this form to get in touch with the team</h4><br><br>
+            <form action="/contact-form.php" method="POST">
+                <input type="text" name="name" placeholder="Enter your name" required><br>
+                <input type="email" name="u_email" placeholder="Enter email address" required><br>
+                <input type="text" name="subj" placeholder="Subject" required><br>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea><br>
+                <button type="submit" class="sub-btn">Submit</button>
+            </form>
+
+        </section>
+
+
+        <!-----------------------------Footer------------------------------>
+        <br><section class="footer">
+            <h4>Support Us</h4>
+            <p>Hello This is Nishant Upadhyay have made this website as my ML Project</p>
+        
+            <p>Made with <i class="far fa-heart"></i>  by Nishant Upadhyay</p>
+        </section>
+
+        <!----------------------JavaScript for MENU------------------------->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200";
+            }
+
+
+        </script>
+</body>
+</html>

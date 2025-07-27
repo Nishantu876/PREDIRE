@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+        <title>WEBSITE</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/all.css"> 
+
+    </head>
+<body>
+        <section class="header">
+            <nav>
+                <a href="/index"> <img src="../static/images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+
+                        <li><a href="/login">LOGIN</a></li>
+                        <li><a href="/profile">PROFILE</a></li>
+                        <!-- <li><a href="/index">HOME</a></li> -->
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/predictionPage">PREDICT</a></li>
+                        <li><a href="/blog">BLOG/NEWS</a></li>
+                        <li><a href="/contactUs">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        <div class="text-box">
+            <h1>Prédire</h1>
+            <p>
+                This is one of the few Health Care Websites where you can predict a disease<br>based on it's symptoms and also get medical and technology related Research papers.
+            </p>
+            <a href="/about" class="hero-btn">Learn More</a>
+        </div>    
+
+        </section>
+
+        <!-------Course-------->
+
+        <section class="course">
+            <h1>Things We Offer</h1>
+            <p>Terms and conditions applied description</p>
+
+            <div class="row">
+                <div class="course-col">
+                    <h3>News</h3>
+                    <p>We provide  News section with top news sources on medicine and technology</p>
+                </div>
+
+                <div class="course-col">
+                    <h3>Prediction</h3>
+                    <p>ML model which accurately predicts a disease based on symptoms</p>
+                </div>
+
+                <div class="course-col">
+                    <h3>Blog</h3>
+                    <p>We provide Research papers related to all kinds of health related problems</p>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------Call to Action--------------------->
+
+        <section class="cta">
+            <h1>For any recommendations or queries<br> Feel Free To Contact Us</h1>
+            <a href="/contactUs" class="hero-btn">CONTACT US</a>
+
+        </section>
+
+        <!-----------------------------Footer------------------------------>
+        <section class="footer">
+            <h4>Support Us</h4>
+            <p>Hello This is Nishant Upadhyay have made this website as my ML Project</p>
+
+            <p>Made with <i class="far fa-heart"></i>  by Nishant Upadhyay</p>
+        </section>
+
+        <!----------------------JavaScript for MENU------------------------->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200";
+            }
+
+
+        </script>
+</body>
+</html>
